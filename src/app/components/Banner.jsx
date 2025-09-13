@@ -5,15 +5,23 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { SiExpress, SiMongodb, SiRedis } from "react-icons/si";
 
 const Banner = () => {
+  // const icons = [
+  //   { id: 1, icon: <FaReact size={28} className="text-blue-400" /> },
+  //   { id: 2, icon: <FaNodeJs size={28} className="text-green-500" /> },
+  //   { id: 3, icon: <FaJs size={28} className="text-yellow-400" /> },
+  //   { id: 4, icon: <FaHtml5 size={28} className="text-orange-500" /> },
+  //   { id: 5, icon: <FaCss3Alt size={28} className="text-blue-500" /> },
+  // ];
   const icons = [
-    { id: 1, icon: <FaReact size={28} className="text-blue-400" /> },
-    { id: 2, icon: <FaNodeJs size={28} className="text-green-500" /> },
-    { id: 3, icon: <FaJs size={28} className="text-yellow-400" /> },
-    { id: 4, icon: <FaHtml5 size={28} className="text-orange-500" /> },
-    { id: 5, icon: <FaCss3Alt size={28} className="text-blue-500" /> },
-  ];
+  { id: 1, icon: <FaReact size={40} className="text-cyan-400" /> },
+  { id: 2, icon: <FaNodeJs size={40} className="text-green-500" /> },
+  { id: 3, icon: <SiExpress size={40} className="text-gray-300" /> },
+  { id: 4, icon: <SiMongodb size={40} className="text-green-400" /> },
+  { id: 5, icon: <SiRedis size={40} className="text-[#FF0000]" /> },
+];
 
   return (
     <section className="relative bg-gray-900 text-white pt-20 pb-12 md:pt-28 md:pb-20 z-10 overflow-hidden">
@@ -108,12 +116,14 @@ const Banner = () => {
             className="relative flex justify-center items-center"
           >
             {/* Profile Image */}
-            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 relative rounded-full overflow-hidden border-4 border-purple-500 shadow-xl z-10">
+            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 relative rounded-full overflow-hidden border-4 border-purple-500 shadow-xl flex items-center justify-center z-10">
               <Image
-                src="/profile.jpg"
+                src="/profile.png"
                 alt="Profile"
-                fill
-                className="object-cover"
+                // fill
+                width={200}
+                height={200}
+                className=""
                 priority
               />
             </div>
